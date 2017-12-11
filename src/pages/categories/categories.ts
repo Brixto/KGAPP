@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PercentPage } from "../percent/percent";
+import { CategoryService } from "../../services/category.service";
 
 @Component({
   selector: 'categories-about',
@@ -10,24 +11,8 @@ export class CategoriesPage {
 
   items;
 
-  constructor(public navCtrl: NavController) {
-    this.items = [
-      {
-        'text': '25%',
-        'disabled': false,
-        'question': 'Zeichne eine Schneeflocke',
-      },
-      {
-        'text': '50%',
-        'disabled': true,
-        'question': 'Zeichne die Morizkirche',
-      },
-      {
-        'text': '100%',
-        'disabled': false,
-        'question': 'Zeichne einen Weihnachtsmarktstand',
-      },
-    ];
+  constructor(public navCtrl: NavController, private categoryService: CategoryService) {
+    this.items = this.categoryService.items;
   }
 
   openPercentPage() {

@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PercentPage } from "../pages/percent/percent";
 import { CategoriesPage } from "../pages/categories/categories";
 import { QuestionPage } from "../pages/question/question";
+import { CategoryService } from "../services/category.service";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { QuestionPage } from "../pages/question/question";
   providers: [
     StatusBar,
     SplashScreen,
+    CategoryService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
