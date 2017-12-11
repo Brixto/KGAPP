@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Aufgabe</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>{{item.question}}</p>
+    <button ion-button color="secondary" block (click)="correct()">Gelöst</button>
+    <button ion-button color="danger" block (click)="correct()">Nicht Gelöst</button>
+</ion-content>
