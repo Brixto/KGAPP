@@ -12,6 +12,10 @@
     </ion-card-header>
 
     <ion-list>
+      <button ion-item *ngFor="let category of categories" (click)="openPercentPage(category)">
+        <ion-icon name="{{category.icon}}" item-start></ion-icon>
+        {{category.name}}
+      </button>
       <button (click)="openPercentPage()" ion-item>
         <ion-icon name='brush' item-start></ion-icon>
         Zeichnen

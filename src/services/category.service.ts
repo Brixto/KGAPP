@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';;
 
 @Injectable()
 export class CategoryService {
-    items;
+    draw;
+    categories;
 
     constructor() {
-        this.items = [
+        this.draw = [
             {
                 'text': '25%',
                 'disabled': false,
@@ -21,6 +22,13 @@ export class CategoryService {
                 'disabled': false,
                 'question': 'Zeichne einen Weihnachtsmarktstand',
             },
+        ];
+        this.categories = [
+            {
+                'name': 'Zeichnen',
+                'icon': 'brush',
+                'questions': this.draw,
+            }
         ];
     }
 }

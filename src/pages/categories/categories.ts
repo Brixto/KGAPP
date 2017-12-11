@@ -10,13 +10,15 @@ import { CategoryService } from "../../services/category.service";
 export class CategoriesPage {
 
   items;
+  categories;
 
   constructor(public navCtrl: NavController, private categoryService: CategoryService) {
     this.items = this.categoryService.items;
+    this.categories = this.categoryService.categories;
   }
 
-  openPercentPage() {
-    console.log('push');
-    this.navCtrl.push(PercentPage, { items: this.items });
+  openPercentPage(category) {
+    console.log(category);
+    this.navCtrl.push(PercentPage, { items: category.questions });
   }
 }
