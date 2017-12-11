@@ -18,11 +18,10 @@ export class QuestionPage {
         this.item.disabled = true;
 
         if (correct) {
-            
             this.scoreService.teams[this.scoreService.active].points += this.item.text;
-            this.scoreService.active++;
-            if (this.scoreService.active === 2) this.scoreService.active = 0;
         }
+        this.scoreService.active++;
+        if (this.scoreService.active === 2) this.scoreService.active = 0;
         this.navCtrl.push(CategoriesPage);
     }
 }
