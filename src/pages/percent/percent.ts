@@ -11,7 +11,6 @@ export class PercentPage {
 
   constructor(public navCtrl: NavController, params: NavParams) {
     this.items = params.data.items;
-    console.log(this.items);
   }
 
   openQuestion(item) {

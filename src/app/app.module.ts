@@ -13,6 +13,7 @@ import { PercentPage } from "../pages/percent/percent";
 import { CategoriesPage } from "../pages/categories/categories";
 import { QuestionPage } from "../pages/question/question";
 import { CategoryService } from "../services/category.service";
+import { ScoreService } from "../services/score.service";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CategoryService } from "../services/category.service";
     StatusBar,
     SplashScreen,
     CategoryService,
+    ScoreService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

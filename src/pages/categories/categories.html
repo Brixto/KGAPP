@@ -16,42 +16,9 @@
         <ion-icon name="{{category.icon}}" item-start></ion-icon>
         {{category.name}}
       </button>
-      <button (click)="openPercentPage()" ion-item>
-        <ion-icon name='brush' item-start></ion-icon>
-        Zeichnen
-      </button>
-
-      <button ion-item>
-        <ion-icon name='chatbubbles' item-start></ion-icon>
-        Erklären
-      </button>
-
-      <button ion-item>
-        <ion-icon name='body' item-start></ion-icon>
-        Pantomine
-      </button>
-
-      <button ion-item>
-        <ion-icon name='volume-up' item-start></ion-icon>
-        Hören
-      </button>
-
-      <button ion-item>
-        <ion-icon name='pizza' item-start></ion-icon>
-        Schmecken
-      </button>
-
-      <button ion-item>
-        <ion-icon name='bonfire' item-start></ion-icon>
-        Weihnachtswissen
-      </button>
-
-      <button ion-item>
-        <ion-icon name='hand' item-start></ion-icon>
-        Fühlen
-      </button>
-
     </ion-list>
   </ion-card>
+
+  <p *ngFor="let team of teams">{{team.name}}: {{team.points}}</p>
 
 </ion-content>
