@@ -14,6 +14,7 @@ import { CategoriesPage } from "../pages/categories/categories";
 import { QuestionPage } from "../pages/question/question";
 import { CategoryService } from "../services/category.service";
 import { ScoreService } from "../services/score.service";
+import { VideoPlayer } from "@ionic-native/video-player";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ScoreService } from "../services/score.service";
     SplashScreen,
     CategoryService,
     ScoreService,
+    VideoPlayer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

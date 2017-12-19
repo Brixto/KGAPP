@@ -5,7 +5,8 @@
 </ion-header>
 
 <ion-content padding>
-    <p>{{item.question}}</p>
+    <p class="question">{{item.question}}</p>
+    <button *ngIf="item.video" ion-button color="blue" block (click)="playVideo(item.video)">Anhören</button>
     <button ion-button color="secondary" block (click)="correct(true)">Gelöst</button>
     <button ion-button color="danger" block (click)="correct()">Nicht Gelöst</button>
 </ion-content>
